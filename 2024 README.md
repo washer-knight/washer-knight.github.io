@@ -1,10 +1,15 @@
+**Context/Background Information**
+ - Investigating the relationship between the global price of corn and the global price of soybeans, two major agricultural commodities.
+ - Price is quoted in US dollars per Metric Ton.
+ - le commodity.xls contains the dataset1 which is quarterly and runs from 1990Q1 to 2022Q3
+
 ****Introduction****
 
  - The two agricultural crops to be discussed in this empirical project are Soybeans and Corn, where the prices of these two goods in relation to each other are analysed using a number of concepts relating to time series analysis. Employing measures, namely cointegration tests and error correction models, while also utilising key components of a time series variable such as unit roots, aided in determining the existence of a causal link between the prices of the two variables.
 
  - Understanding the nature in which prices of agricultural goods fluctuate and move together, especially in this case, where such trends are found to be cointegrating, is important for supply-demand analysis, as we know from Economic theory that rising prices are a good indicator for increasing levels of consumer demand, and vice-versa. What’s more, this drives the choices firms make at a higher level.
 
- - **Tests and Econometric Models Utilized**
+**Tests and Econometric Models Utilized**
 
     - Unit Root
     - Cointegration
