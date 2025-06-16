@@ -1,0 +1,92 @@
+##set working directory
+setwd()
+getwd()
+
+## install packages and load data
+
+install.packages(urca)
+library(urca)
+install.packages("tsDyn")
+library(tsDyn)
+
+commodity23 <- ts(commodity23, frequency = 4, start =c(1990,1))         ####quarterly time series data starting in 1990
+
+### transform data 
+
+Corn<- ts(commodity23[,1], frequency = 4, start = c(1990,1))         ###data in log levels 
+Soybeans<- ts(commodity23[,2], frequency = 4, start = c(1990,1))
+
+Corn_fd <- diff(Corn)                                                ###first difference the data 
+Soybeans_fd <- diff(Soybeans)
+
+### informal checks for non-stationarity 
+
+ts.plot(Corn, Soybeans, col=1:2)
+legend("topleft", legend = colnames(commodity23), lty = 1, col = 1:2, cex = 0.5)
+
+ts.plot(Corn_fd, Soybeans_fd, col=1:2)
+legend("topleft", legend = colnames(commodity23), lty = 1, col = 1:2, cex = 0.5)
+
+acfpl <- acf(Corn)
+
+acfpl <- acf (Corn, plot = FALSE)
+acfpl$lag <- acfpl$lag * 4
+plot(acfpl, xlab="Lags")
+plot(acfpl, xlim = c(1,12), ylim = c(-1,1), xlab="Lags")  
+
+acfpl <- acf (Corn_fd, plot = FALSE)
+acfpl$lag <- acfpl$lag * 4
+plot(acfpl, xlab="Lags")
+plot(acfpl, xlim = c(1,12), ylim = c(-1,1), xlab="Lags")  
+
+acfpl <- acf(Soybeans)
+acfpl <- acf (Soybeans, plot = FALSE)
+acfpl$lag <- acfpl$lag * 4
+plot(acfpl, xlab="Lags")
+plot(acfpl, xlim = c(1,12), ylim = c(-1,1), xlab="Lags")  
+
+acfpl <- acf(Soybeans_fd)
+acfpl <- acf (Soybeans_fd, plot = FALSE)
+acfpl$lag <- acfpl$lag * 4
+plot(acfpl, xlab="Lags")
+plot(acfpl, xlim = c(1,12), ylim = c(-1,1), xlab="Lags")  
+
+##### formal checks for stationarity 
+
+summary(ur.df(Corn, type = "trend", lags = 4, selectlags = "AIC"))
+summary(ur.df(Corn, type = "drift", lags = 4, selectlags = "AIC"))
+
+summary(ur.df(Soybeans, type = "trend", lags = 4, selectlags = "AIC"))
+summary(ur.df(Soybeans, type = "drift", lags = 4, selectlags = "AIC"))
+
+
+summary(ur.df(Soybeans_fd, type = "drift", lags = 4, selectlags = "AIC"))
+summary(ur.df(Corn_fd, type = "drift", lags = 4, selectlags = "AIC"))
+
+#####testing for cointegration using EG test 
+
+mod<-lm(Corn~Soybeans)
+summary(mod)
+res<-resid(mod)
+ts.plot(res)
+summary(ur.df(resid(mod), type = "none" , lags = 4, selectlags = "AIC"))
+
+#####estimating the ECM 
+
+n <-length(Corn_fd)
+
+ecmc<-lm(Corn_fd[2:n]~res[1:(n-1)]+Soybeans_fd[2:n]+Corn_fd[1:(n-1)]+Soybeans_fd[1:(n-1)])  ####ecmc is the ECM of Corn  as the dependent variable
+summary(ecmc)
+
+ecms<-lm(Soybeans_fd[2:n]~res[1:(n-1)]+Corn_fd[2:n]+Soybeans_fd[1:(n-1)]+Corn_fd[1:(n-1)])    ####ecms is the ECM of Soybeans as the dependent variable 
+summary(ecms)
+
+##### testing for cointegration using the Johansen test 
+
+vecm<-VECM(commodity23, lag = 0, include = "const", estim = "ML")
+summary(rank.test(vecm, type = "trace", cval = 0.05))
+
+vecm<-VECM(commodity23, lag = 1, include = "const", estim = "ML")
+summary(rank.test(vecm, type = "trace", cval = 0.05))
+
+#END
