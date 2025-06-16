@@ -44,5 +44,4 @@ myplot2+theme_bw()
   #linear fit estimation
 bear<-lm(data$loanamt~data$appinc)
 summary(bear)
-
-#end
+#END
