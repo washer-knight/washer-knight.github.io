@@ -108,11 +108,16 @@ The Histogram will be used to illustrate this:
  - It is represented by a regression line that shows the expected loan amount given an applicant's income level.
  - By computing the data via R.Studio, the correlation between the two variables is **0.4334031**. (moderately strong)
  - As the relationship is **positive(+)**, it means that loan amounts tend to increase with increasing income levels. This could indicate that lenders are more willing to provide larger loans to applicants who have higher incomes, as they may be seen as less risky borrowers.
-![image](https://github.com/user-attachments/assets/171e1f45-1e26-491e-953f-cdd9e4fde17d)
 
 **Given Statistics**
 
+![Image](https://github.com/user-attachments/assets/fdb92571-4b1c-4107-a276-260d5445bfa2)
 
+![Image](https://github.com/user-attachments/assets/dce98bb7-0b5b-4b36-bd9c-a782f7363d62)
+
+![Image](https://github.com/user-attachments/assets/31aabe3f-a474-4f8f-bc48-cf04cbe74493)
+
+![Image](https://github.com/user-attachments/assets/8d38b333-9e79-4ae9-826f-10b4560b95f6)
 
 
 
