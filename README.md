@@ -25,3 +25,26 @@ as the applicant's income increases, the loan amount received from the bankin
 ****Summary statistics & Table****
 
 ![Image](https://github.com/user-attachments/assets/b05ec9dc-7738-487c-99ef-4d0633b24164)
+![Image](https://github.com/user-attachments/assets/2a4a7a62-ea62-4138-897d-a35d5bcbeb7e)
+![Image](https://github.com/user-attachments/assets/f8cc1026-523e-45ff-8af1-b7d678c6ad8d)
+
+--------------------------------------------------------------------------------------------------
+****Discussion of the data****
+
+****Mean****
+- 143 is the mean data/distribution center of the Loan amount in 1000s
+- 84.7 is the mean data/distribution center of the Applicant's income in 1000s
+
+****Median****
+- 126 is the midpoint of the Loan amount in 1000s. Min:2; Q3:165; Max:980.
+- 64 is the midpoint of the Applicant's income in 1000s. Min:0; Q3:88; Max:972.
+
+****Std Dev****
+- From these statistics, we know the data is extremely skewed
+
+------------------------------------------------------------------------------------------------------
+
+****Histogram****
+
+The Histogram will be used to illustrate this:
+
