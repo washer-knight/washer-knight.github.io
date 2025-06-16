@@ -97,9 +97,36 @@ The Histogram will be used to illustrate this:
  - positive
  - moderately strong
 
+![Image](https://github.com/user-attachments/assets/99ec9a23-4c6d-40ab-81bd-59c12bed5e5a)
+
+ - The scatterplot above shows the relationship between Applicant's income in 1000s and Loan amount in thousands (1989 observations of 2 variables).
+
+---------------------------------------------------------------------------------------------------------
+
+****Interpretation of the estimated relationship****
+ - The estimated relationship between loan amount in 1000s and applicant's income in 1000s is a measure of how these two variables are related to each other. 
+ - It is represented by a regression line that shows the expected loan amount given an applicant's income level.
+ - By computing the data via R.Studio, the correlation between the two variables is **0.4334031**. (moderately strong)
+ - As the relationship is **positive(+)**, it means that loan amounts tend to increase with increasing income levels. This could indicate that lenders are more willing to provide larger loans to applicants who have higher incomes, as they may be seen as less risky borrowers.
+![image](https://github.com/user-attachments/assets/171e1f45-1e26-491e-953f-cdd9e4fde17d)
+
+**Given Statistics**
 
 
-The scatterplot above shows the relationship between Applicant's income in 1000s and Loan amount in thousands (1989 observations of 2 variables).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
