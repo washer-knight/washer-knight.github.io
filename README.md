@@ -21,3 +21,7 @@ applications for purchasing property
 -The two variables—loan amount and applicant’s income, are positively correlated; which is to say that
 as the applicant's income increases, the loan amount received from the banking institution will also increase and vice-versa.
 
+--------------------------------------------------------------------------------------------------
+****Summary statistics & Table****
+
+![Image](https://github.com/user-attachments/assets/b05ec9dc-7738-487c-99ef-4d0633b24164)
