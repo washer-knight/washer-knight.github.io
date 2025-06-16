@@ -74,16 +74,32 @@ The Histogram will be used to illustrate this:
  - This is shown clearly in the linear regression model below
  
 ---------------------------------------------------------------------------------------------------------
+****Linear Regression Model****
+
+![Image](https://github.com/user-attachments/assets/7b9e9f63-5a93-479c-b014-30832ae80e97)
+
+![Image](https://github.com/user-attachments/assets/21344a5a-2eca-4109-b705-3e3757f64231)
+
+![Image](https://github.com/user-attachments/assets/b38bbeca-1f0c-410c-a610-59dc6149ca64)
+
+---------------------------------------------------------------------------------------------------------
+
+****Linear Fit Estimation****
+
+****Response variable?****
+ - Loan amount in thousands 
+
+****Explanatory variable?****
+ - Applicant Income in 1000s
+
+****Relationship:****
+ - linear
+ - positive
+ - moderately strong
 
 
 
-
-
-
-
-
-
-
+The scatterplot above shows the relationship between Applicant's income in 1000s and Loan amount in thousands (1989 observations of 2 variables).
 
 
 
