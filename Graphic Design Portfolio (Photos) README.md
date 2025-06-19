@@ -1,4 +1,3 @@
-Coordinated the planning, marketing strategy and outreach for some events alongside designated representatives at my university as a member of a various Working Groups and task-forces over the course of over 9 months, and acted as lead graphic designer for others.
 
 Global Village Takeover: Event Coordinator and Lead Graphic Designer
 
